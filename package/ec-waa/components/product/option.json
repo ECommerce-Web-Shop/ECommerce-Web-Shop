@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_product_options",
+  "info": {
+    "name": "option",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "color": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "quantityInStock": {
+      "type": "integer"
+    },
+    "soldQuantity": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}
