@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ordered-items",
+      "handler": "ordered-item.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ordered-items/count",
+      "handler": "ordered-item.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ordered-items/:id",
+      "handler": "ordered-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ordered-items",
+      "handler": "ordered-item.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ordered-items/:id",
+      "handler": "ordered-item.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ordered-items/:id",
+      "handler": "ordered-item.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

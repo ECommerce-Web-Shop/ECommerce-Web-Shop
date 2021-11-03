@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordered_items",
+  "info": {
+    "name": "Ordered Item",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "color": {
+      "type": "string"
+    },
+    "qty": {
+      "type": "integer"
+    },
+    "unitPrice": {
+      "type": "biginteger"
+    },
+    "totalPrice": {
+      "type": "biginteger"
+    },
+    "selected": {
+      "type": "boolean",
+      "default": true
+    },
+    "product": {
+      "model": "product",
+      "autoPopulate": false
+    }
+  }
+}
