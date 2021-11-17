@@ -1,0 +1,187 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string"
+    },
+    "regularPrice": {
+      "type": "biginteger",
+      "min": "0",
+      "default": "0",
+      "required": true
+    },
+    "finalPrice": {
+      "type": "biginteger",
+      "min": "0",
+      "default": "0"
+    },
+    "salesPercentage": {
+      "type": "integer",
+      "min": 0,
+      "max": 60,
+      "default": 0,
+      "required": true
+    },
+    "stars": {
+      "type": "decimal",
+      "default": 0,
+      "required": true,
+      "min": 0,
+      "max": 5
+    },
+    "votes": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    },
+    "brand": {
+      "model": "brand"
+    },
+    "cpu": {
+      "type": "string",
+      "required": true
+    },
+    "gpu": {
+      "type": "string",
+      "required": true
+    },
+    "screenSize": {
+      "type": "decimal",
+      "min": 0,
+      "required": true,
+      "default": 0
+    },
+    "screenPanel": {
+      "type": "string",
+      "required": true
+    },
+    "screenResolution": {
+      "type": "string",
+      "required": true
+    },
+    "height": {
+      "type": "decimal",
+      "min": 0,
+      "default": 0,
+      "required": true
+    },
+    "width": {
+      "type": "decimal",
+      "min": 0,
+      "default": 0,
+      "required": true
+    },
+    "depth": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0,
+      "required": true
+    },
+    "weight": {
+      "type": "decimal",
+      "required": true,
+      "default": 0,
+      "min": 0
+    },
+    "ram": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "required": true
+    },
+    "rom": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "required": true
+    },
+    "platformName": {
+      "type": "enumeration",
+      "enum": [
+        "Android",
+        "iOS"
+      ],
+      "default": "Android",
+      "required": true
+    },
+    "platformVersion": {
+      "type": "string",
+      "required": true
+    },
+    "batteryCapacity": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "required": true
+    },
+    "batteryType": {
+      "type": "enumeration",
+      "enum": [
+        "LiIon",
+        "LiPo"
+      ],
+      "default": "LiIon",
+      "required": true
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.option",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "text",
+      "required": true
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "fullDesc": {
+      "type": "richtext",
+      "default": "Bảo hành chính hãng 12 tháng, 1 ĐỔI 1 trong 30 ngày đầu",
+      "required": true
+    },
+    "inclusionBox": {
+      "type": "richtext",
+      "default": "Bảo hành chính hãng 12 tháng, 1 ĐỔI 1 trong 30 ngày đầu",
+      "required": true,
+      "unique": false
+    },
+    "warranty": {
+      "type": "richtext",
+      "default": "Bảo hành chính hãng 12 tháng, 1 ĐỔI 1 trong 30 ngày đầu",
+      "required": true
+    },
+    "condition": {
+      "type": "richtext",
+      "default": "Nguyên hộp, đầy đủ phụ kiện từ nhà sản xuất",
+      "required": true
+    },
+    "promotion": {
+      "type": "richtext"
+    }
+  }
+}

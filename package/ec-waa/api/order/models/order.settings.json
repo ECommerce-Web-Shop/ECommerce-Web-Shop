@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "items": {
+      "collection": "ordered-item"
+    },
+    "consigneeName": {
+      "type": "string",
+      "required": true
+    },
+    "consigneePhone": {
+      "type": "string",
+      "regex": "[0-9]",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "addressLine1": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Confirmed",
+        "Delivery",
+        "Delivered",
+        "Cancelled"
+      ]
+    },
+    "isPaid": {
+      "type": "boolean"
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "COD",
+        "ZaloPay",
+        "VnPay",
+        "MasterCard"
+      ]
+    },
+    "totalAmount": {
+      "type": "biginteger"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "finalAmount": {
+      "type": "biginteger"
+    },
+    "coupon": {
+      "model": "coupon"
+    },
+    "orderId": {
+      "type": "uid"
+    },
+    "orderCode": {
+      "type": "uid"
+    }
+  }
+}

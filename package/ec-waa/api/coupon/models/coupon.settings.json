@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coupons",
+  "info": {
+    "name": "Coupon",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string",
+      "regex": "[0-9A-Z]",
+      "required": true,
+      "unique": true
+    },
+    "expiryDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "discountPercentage": {
+      "type": "decimal",
+      "default": 0,
+      "required": false,
+      "max": 60,
+      "min": 0
+    },
+    "discountAmount": {
+      "type": "biginteger",
+      "min": "50000"
+    }
+  }
+}
