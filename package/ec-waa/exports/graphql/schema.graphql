@@ -2438,7 +2438,6 @@ type Query {
   isValidUsername(username: String!): Boolean!
   isAvailableEmail(email: String!): Boolean!
   isAvailableUsername(username: String!): Boolean!
-  getBlogBySlug(slug: String!): Blog!
   getCart(cartId: ID): UserCart!
   getOrders: [Order]!
   searchProducts(filter: ProductFilter, limit: Int, skip: Int, sort: [String]): [Product]!
